@@ -58,16 +58,7 @@ class _hotelsScreen extends State<HotelsScreen> {
                             final hotels = state.hotels[index];
                             return GestureDetector(
                               onTap: () {
-                                context.go(
-                                  AppRouter.kHotelsDetailsView,
-                                  extra: {
-                                    'description': hotels.description,
-                                    'image': hotels.imageUrl,
-                                    'lastUpdate': hotels.lastUpdated,
-                                    'rating': hotels.rating,
-                                    'reviewsCount': hotels.reviewsCount,
-                                  },
-                                );
+                                
                               },
                               child: Card(
                                 elevation: 5.r,
