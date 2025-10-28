@@ -35,7 +35,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
     Timer(const Duration(seconds: 6), () {
       if (mounted) {
-        GoRouter.of(context).pushReplacement(AppRouter.kHotelsView);
+        GoRouter.of(context).pushReplacement(AppRouter.kLandMarkView);
       }
     });
   }

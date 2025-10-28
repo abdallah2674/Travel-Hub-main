@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:travel_hub/constant.dart';
 import 'package:travel_hub/core/utils/app_router.dart';
-import 'package:travel_hub/data/cubit/hotels_cubit.dart';
-import 'package:travel_hub/data/cubit/hotels_state.dart';
+import 'package:travel_hub/data/cubits/hotels_cubit/hotels_cubit.dart';
+import 'package:travel_hub/data/cubits/hotels_cubit/hotels_state.dart';
 import 'package:travel_hub/features/hotels/presentation/widgets/custom_button.dart';
 
 class HotelsScreen extends StatefulWidget {
@@ -40,7 +40,7 @@ class _hotelsScreen extends State<HotelsScreen> {
       ),
       backgroundColor: kWhite,
       body: Padding(
-        padding: EdgeInsetsGeometry.all(16.r),
+        padding: EdgeInsets.all(16.r),
         child: BlocBuilder<HotelsCubit, HotelsState>(
           builder: (context, state) {
             return state is HotelsLoading
@@ -58,12 +58,12 @@ class _hotelsScreen extends State<HotelsScreen> {
                             final hotels = state.hotels[index];
                             return GestureDetector(
                               onTap: () {
-                                
+                                GoRouter.of(context).push(AppRouter.kHotelsDetailsView,extra: hotels);
                               },
                               child: Card(
                                 elevation: 5.r,
                                 shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(24),
+                                  borderRadius: BorderRadius.circular(24.r),
                                 ),
                                 margin: EdgeInsets.all(5.r),
                                 child: Column(
@@ -74,7 +74,7 @@ class _hotelsScreen extends State<HotelsScreen> {
                                       children: [
                                         ClipRRect(
                                           borderRadius: BorderRadius.vertical(
-                                            top: Radius.circular(24),
+                                            top: Radius.circular(24.r),
                                           ),
                                           child: Image.network(
                                             hotels.imageUrl,

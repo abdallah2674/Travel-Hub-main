@@ -41,6 +41,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   intl: ^0.20.2
   flutter_bloc: ^9.1.1
+  carousel_slider: ^5.1.1
 
 dev_dependencies:
   flutter_test:
