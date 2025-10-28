@@ -7,7 +7,4 @@ class CarouselSliderCubit extends Cubit<int> {
     emit(index);
   }
 
-  void reset() {
-    emit(0);
-  }
 }
