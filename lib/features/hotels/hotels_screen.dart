@@ -12,14 +12,15 @@ class HotelsScreen extends StatefulWidget {
   const HotelsScreen({super.key});
 
   @override
-  State<HotelsScreen> createState() => _hotelsScreen();
+  State<HotelsScreen> createState() => _HotelsScreen();
 }
 
-class _hotelsScreen extends State<HotelsScreen> {
+class _HotelsScreen extends State<HotelsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: kWhite,
         title: Align(
           alignment: Alignment.center,

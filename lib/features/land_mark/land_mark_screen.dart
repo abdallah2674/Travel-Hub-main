@@ -19,6 +19,7 @@ class _LandMarkScreenState extends State<LandMarkScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: kWhite,
         title: Align(
           alignment: Alignment.center,
